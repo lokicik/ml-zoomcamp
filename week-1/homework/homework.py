@@ -36,7 +36,7 @@ df.fillna(fill_mean, inplace=True)
 after_fill_mean = df['total_bedrooms'].mean() # mean didn't change
 
 # Question 7
-# 1- Select all the options located on islands.
+# 1- Select all the options located on islands.p
 # 2- Select only columns housing_median_age, total_rooms, total_bedrooms.
 # 3- Get the underlying NumPy array. Let's call it X.
 # 4- Compute matrix-matrix multiplication between the transpose of X and X. To get the transpose, use X.T. Let's call the result XTX.
