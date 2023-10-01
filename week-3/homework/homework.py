@@ -159,11 +159,10 @@ del df_test["above_average"]
 
 
 df_val.columns
-# Create a DataFrame to store the results
+
 results = pd.DataFrame(columns=["Feature", "Accuracy"])
 
-# Loop through each feature and exclude it one by one
-# List of features to analyze
+
 features_to_analyze = ["make", "model", "year", "engine_hp", "engine_cylinders", "transmission_type", "vehicle_style",
                        "highway_mpg", "city_mpg", "price"]
 
@@ -187,11 +186,11 @@ for feature in features_to_analyze:
     X_val = dv.transform(val_dicts)
 
 
-    # Train a model without the current feature
+
     model = LogisticRegression(solver='liblinear', C=10, max_iter=1000, random_state=42)
     model.fit(X_train, y_train)
 
-    # Calculate accuracy without the feature
+
     accuracy_filtered = accuracy_score(y_val, model.predict(X_val))
 
 
@@ -200,7 +199,7 @@ for feature in features_to_analyze:
     i += 1
 
 
-# Find the feature with the smallest difference
+
 least_useful_feature = max(feature_differences, key=feature_differences.get)
 smallest_difference = feature_differences[least_useful_feature]
 
@@ -225,34 +224,34 @@ from sklearn.metrics import mean_squared_error
 from math import sqrt
 df['price_log'] = np.log1p(df['price'])
 
-# Split the data into training and validation sets
+
 X_train, X_val = train_test_split(df, random_state=42, test_size=0.2)
 y_train = X_train['price_log']
 y_val = X_val['price_log']
 
-# Define a list of alpha values to try
+
 alphas = [0, 0.01, 0.1, 1, 10]
 
-# Initialize variables to store best RMSE and corresponding alpha
+
 best_rmse = float('inf')
 best_alpha = None
 
-# Iterate through the alpha values and train Ridge regression models
+
 for alpha in alphas:
     model = Ridge(alpha=alpha, solver='sag', random_state=42)
     model.fit(X_train[numerical], y_train)
     y_pred = model.predict(X_val[numerical])
     rmse = sqrt(mean_squared_error(y_val, y_pred))
 
-    # Check if this alpha results in a better RMSE
+
     if rmse < best_rmse:
         best_rmse = rmse
         best_alpha = alpha
 
-# Round the best RMSE to 3 decimal digits
+
 best_rmse = round(best_rmse, 3)
 
-# Print the best alpha and corresponding RMSE
+
 print(f"The best alpha for Ridge regression is {best_alpha} with RMSE of {best_rmse}")
 
 
