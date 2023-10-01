@@ -165,54 +165,52 @@ results = pd.DataFrame(columns=["Feature", "Accuracy"])
 # Loop through each feature and exclude it one by one
 # List of features to analyze
 features_to_analyze = ["make", "model", "year", "engine_hp", "engine_cylinders", "transmission_type", "vehicle_style",
-                       "highway_mpg", "city_mpg"]
+                       "highway_mpg", "city_mpg", "price"]
 
-
+numerical = ["year", "engine_hp", "engine_cylinders", "highway_mpg", "city_mpg"]
+categorical = ["make", "model", "transmission_type", "vehicle_style"]
 
 feature_differences = {}
-
-
+all_list = categorical + numerical
+i = 0
 for feature in features_to_analyze:
-    i = 0
-    categorical.pop(i)
-    train_dicts = df_train[categorical + numerical].to_dict(orient="records")
+    all_list.pop(i)
+    train_dicts = df_train[all_list].to_dict(orient="records")
     dv = DictVectorizer(sparse=False)
     dv.fit(train_dicts)
-    dv.get_feature_names_out()
+
     dv.transform(train_dicts)
 
     X_train = dv.fit_transform(train_dicts)
 
-    val_dicts = df_val[categorical + numerical].to_dict(orient="records")
+    val_dicts = df_val[all_list].to_dict(orient="records")
     X_val = dv.transform(val_dicts)
-    # Exclude the current feature
 
 
-
-
+    # Train a model without the current feature
     model = LogisticRegression(solver='liblinear', C=10, max_iter=1000, random_state=42)
     model.fit(X_train, y_train)
-    # Train a model without the current feature
-    model_filtered = LogisticRegression(solver='liblinear', C=10, max_iter=1000, random_state=42)
-    model_filtered.fit(X_train, y_train)
 
     # Calculate accuracy without the feature
-    accuracy_filtered = accuracy_score(y_val, model_filtered.predict(X_val))
+    accuracy_filtered = accuracy_score(y_val, model.predict(X_val))
 
-    # Calculate the difference in accuracy
-    feature_difference = accuracy_filtered
 
-    feature_differences[feature] = feature_difference
-    categorical.insert(0, feature)
+    feature_differences[feature] = accuracy_filtered
+    all_list.insert(i, feature)
     i += 1
 
 
 # Find the feature with the smallest difference
-least_useful_feature = min(feature_differences, key=feature_differences.get)
+least_useful_feature = max(feature_differences, key=feature_differences.get)
 smallest_difference = feature_differences[least_useful_feature]
 
 print("Least useful feature:", least_useful_feature)
 print("Smallest difference:", smallest_difference)
+# 'city_mpg': 0.9324381032312211} smallest
+# 'year': 0.9395719681074276,
+# 'engine_hp': 0.9349559378934117,
+# 'transmission_type': 0.9349559378934117,
+
 # Question 6
 # For this question, we'll see how to use a linear regression model from Scikit-Learn.
 # We'll need to use the original column price. Apply the logarithmic transformation to this column.
