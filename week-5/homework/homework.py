@@ -58,9 +58,9 @@ print('output:', y_pred)
 # requests.post(url, json=client).json()
 # What's the probability that this client will get a credit?
 
-# run python predicthomework.py on terminal first
+# run python predictquestion.py on terminal first
 import requests
-url = "http://localhost:9696/predicthomework"
+url = "http://localhost:9696/predictquestion"
 client = {"job": "unknown", "duration": 270, "poutcome": "failure"}
 requests.post(url, json=client).json()
 # Out[43]: {'poutcome': False, 'poutcome_probability': 0.13968947052356817}
@@ -120,9 +120,9 @@ requests.post(url, json=client).json()
 # 0.730
 # 0.968
 
+
 # docker build -t mlhomework5 .
 # docker run -it --rm -p 9696:9696 mlhomework5
-
 # python predictdocker.py
 output = {'poutcome': True, 'poutcome_probability': 0.726936946355423}
 
