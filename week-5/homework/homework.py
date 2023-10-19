@@ -10,15 +10,16 @@ from sklearn.feature_extraction import DictVectorizer
 # What's the version of pipenv you installed?
 # Use --version to find out
 
-!pip install pipenv
-!pipenv --version # pipenv, version 2023.10.3
+# !pip install pipenv
+# !pipenv --version
+# pipenv, version 2023.10.3
 
 # Question 2
 # Use Pipenv to install Scikit-Learn version 1.3.1
 # What's the first hash for scikit-learn you get in Pipfile.lock?
 # Note: you should create an empty folder for homework and do it there.
 
-!pipenv install scikit-learn==1.3.1
+# !pipenv install scikit-learn==1.3.1
 # 0c275a06c5190c5ce00af0acbb61c06374087949f643ef32d355ece12c4db043
 
 

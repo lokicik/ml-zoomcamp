@@ -29,7 +29,7 @@ sns.histplot(df.msrp, bins=50)
 
 sns.histplot(df.msrp[df.msrp < 100000], bins=50)
 
-np.log1p([0,1,10,100,100000])
+np.log1p([0,1,10,100,99906.49631404002])
 np.log([0+1,1+1,10+1,100+1,100000+1])
 
 price_logs = np.log1p(df.msrp)

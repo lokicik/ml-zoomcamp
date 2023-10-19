@@ -121,7 +121,7 @@ output_file
 f_out = open(output_file, 'wb')
 pickle.dump((dv, model), f_out)
 f_out.close()
-!ls -lh *.bin
+# !ls -lh *.bin
 
 with open(output_file, 'wb') as f_out:
     pickle.dump((dv, model), f_out)
