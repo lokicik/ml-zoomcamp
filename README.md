@@ -1,3 +1,4 @@
+![image](https://github.com/lokicik/ml-zoomcamp/assets/65876412/ab75aed5-43f2-4a80-95ad-bfaf7d6fadd7)
 # DataTalks.Club Machine Learning Zoomcamp
 
 ## This repository contains my work during the DataTalks.Club Machine Learning Zoomcamp which started on 09/2023.
@@ -7,6 +8,7 @@
 ### https://github.com/DataTalksClub/machine-learning-zoomcamp
 
 ### This course is a self-paced course, so you can still enroll even if it has already started.
+
 
 
 ## Week 1. [Introduction to Machine Learning](01-intro/)
