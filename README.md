@@ -1,5 +1,5 @@
 ![image](https://github.com/lokicik/ml-zoomcamp/assets/65876412/ab75aed5-43f2-4a80-95ad-bfaf7d6fadd7)
-# DataTalks.Club Machine Learning Zoomcamp
+# DataTalksClub Machine Learning Zoomcamp
 
 ## This repository contains my work during the DataTalks.Club Machine Learning Zoomcamp which started on 09/2023.
 
