@@ -9,7 +9,7 @@
 ### This course is a self-paced course, so you can still enroll even if it has already started.
 
 
-## 1. [Introduction to Machine Learning](01-intro/)
+## Week 1. [Introduction to Machine Learning](01-intro/)
 
 - 1.1 [Introduction to Machine Learning](01-intro/01-what-is-ml.md)
 - 1.2 [ML vs Rule-Based Systems](01-intro/02-ml-vs-rules.md)
@@ -23,7 +23,7 @@
 - 1.10 [Summary](01-intro/10-summary.md)
 - 1.11 [Homework](01-intro/homework.md)
 
-## 2. [Machine Learning for Regression](02-regression/)
+## Week 2. [Machine Learning for Regression](02-regression/)
 
 - 2.1 [Car price prediction project](02-regression/01-car-price-intro.md)
 - 2.2 [Data preparation](02-regression/02-data-preparation.md)
@@ -45,7 +45,7 @@
 - 2.18 [Homework](02-regression/homework.md)
 
 
-## 3. [Machine Learning for Classification](03-classification/)
+## Week 3. [Machine Learning for Classification](03-classification/)
 
 - 3.1 [Churn prediction project](03-classification/01-churn-project.md)
 - 3.2 [Data preparation](03-classification/02-data-preparation.md)
@@ -64,7 +64,7 @@
 - 3.15 [Homework](03-classification/homework.md)
 
 
-## 4. [Evaluation Metrics for Classification](04-evaluation/)
+## Week 4. [Evaluation Metrics for Classification](04-evaluation/)
 
 - 4.1 [Evaluation metrics: session overview](04-evaluation/01-overview.md)
 - 4.2 [Accuracy and dummy model](04-evaluation/02-accuracy.md)
@@ -78,7 +78,7 @@
 - 4.10 [Homework](04-evaluation/homework.md)
 
 
-## 5. [Deploying Machine Learning Models](05-deployment/)
+## Week 5. [Deploying Machine Learning Models](05-deployment/)
 
 - 5.1 [Intro / Session overview](05-deployment/01-intro.md)
 - 5.2 [Saving and loading the model](05-deployment/02-pickle.md)
@@ -92,7 +92,7 @@
 - 5.10 [Homework](05-deployment/homework.md)
 
 
-## 6. [Decision Trees and Ensemble Learning](06-trees/)
+## Week 6. [Decision Trees and Ensemble Learning](06-trees/)
 
 - 6.1 [Credit risk scoring project](06-trees/01-credit-risk.md)
 - 6.2 [Data cleaning and preparation](06-trees/02-data-prep.md)
@@ -109,12 +109,12 @@
 
 
 
-## [Midterm Project](projects/#midterm-project)
+## Week 7 [Midterm Project](projects/#midterm-project)
 
 Putting everything we've learned so far in practice!
 
 
-## 8. [Neural Networks and Deep Learning](08-deep-learning/)
+## Week 8. [Neural Networks and Deep Learning](08-deep-learning/)
 
 - 8.1 [Fashion classification](08-deep-learning/01-fashion-classification.md)
 - 8.1b [Setting up the Environment on Saturn Cloud](08-deep-learning/01b-saturn-cloud.md)
@@ -134,7 +134,7 @@ Putting everything we've learned so far in practice!
 - 8.15 [Homework](08-deep-learning/homework.md)
 
 
-## 9. [Serverless Deep Learning](09-serverless/)
+## Week 9. [Serverless Deep Learning](09-serverless/)
 
 - 9.1 [Introduction to Serverless](09-serverless/01-intro.md)
 - 9.2 [AWS Lambda](09-serverless/02-aws-lambda.md)
@@ -148,7 +148,7 @@ Putting everything we've learned so far in practice!
 - 9.10 [Homework](09-serverless/homework.md)
 
 
-## 10. [Kubernetes and TensorFlow Serving](10-kubernetes/)
+## Week 10. [Kubernetes and TensorFlow Serving](10-kubernetes/)
 
 - 10.1 [Overview](10-kubernetes/01-overview.md)
 - 10.2 [TensorFlow Serving](10-kubernetes/02-tensorflow-serving.md)
@@ -163,7 +163,7 @@ Putting everything we've learned so far in practice!
 - 10.11 [Homework](10-kubernetes/homework.md)
 
 
-## 11. [KServe](11-kserve/) (optional)
+## Week 11. [KServe](11-kserve/) (optional)
 
 - 11.1 [Overview](11-kserve/01-overview.md)
 - 11.2 [Running KServe locally](11-kserve/02-kserve-local.md)
