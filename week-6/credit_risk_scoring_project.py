@@ -612,5 +612,4 @@ model = xgb.train(xgb_params, dfulltrain, num_boost_round=175)
 y_pred = model.predict(dtest)
 roc_auc_score(y_test, y_pred)
 
-# 6.10 Summary
 
