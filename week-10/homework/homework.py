@@ -32,7 +32,9 @@ while True:
 
 
 # Q3
-# kubectl
+# kubectl get services
 
 
 # Q4
+# kind load docker-image zoomcamp-model:hw10
+
