@@ -82,3 +82,15 @@ Regarding reproducibility:
 pipenv shell instead of pip shell
 
 Your train script should only contain the logic for training. The notebook already entails the EDA, parameter tuning etc.
+
+-----------------------------------------------
+Capstone 1 Evals
+
+66c49e0e270a9a45bd492e02fa2154334571a8f9
+I was unable to run train.py. I see no cloud deployment, I can recommend you Render for web deployment, it really becomes easy with it, compared to AWS. You could've used comment lines to explain your code and your findings from EDA. And I gotta add that is some uncommon way to use your github repo, can you really properly use it with separate branches? It's cool but I haven't seen it before, it's interesting.
+
+a1bb2b464c47437f5daaac4f67352291cd6768b7
+Interesting dataset and project idea! I liked your readme structure. I see that you haven't done cloud deployment, I can recommend you Render to do that, it's much easier compared to AWS. train.py runs fine, but there are some syntax errors in the notebook, when I fixed them the notebook ran just fine, if there is no logic error in the notebook I think it's not a problem. You probably forgot to mention dependency and environment management in the readme, but as long as there is pipfiles that's okay too. I would recommend you to use more comment lines in your notebook to explain your code better. Overall, I liked your project. Congratulations!
+
+a89705d5f5fa102dd7f4bcf153eeb48aa5ad36a7
+Cool project! I liked your visualizations. Nice job with the data cleaning part. There might be a problem with cloud_test.py, because when I change the values in the player_attributes dict, the output always the same : "{'player_value': 66433568.0}" but it works and thats what matters. Congratulations!
